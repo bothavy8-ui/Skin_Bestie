@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Contact Skin Beauty | Get in Touch</title>
+    <meta name="description" content="Have questions about skincare routines or feedback on our guides? Contact the Skin Beauty team directly.">
+    <meta name="keywords" content="contact skin beauty, skincare questions, feedback">
+    <link rel="canonical" href="https://skinbeauty.com/page/contact.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Skin Beauty">
+    <meta property="og:description" content="Reach out to the Skin Beauty team with your questions.">
+    <meta property="og:url" content="https://skinbeauty.com/page/contact.html">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../asset/css/global.css">
+    <link rel="stylesheet" href="../asset/css/contact.css">
+    <link rel="stylesheet" href="../asset/css/responvie.css">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Replace with your EmailJS Public Key
+            emailjs.init("d_NMifCpJdxn9Mb5T");
+        })();
+    </script>
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-sage sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="../index.html">Skin Bestie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skin-types.html">Skin Type</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ingredients.html">Ingredients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skincare-routine.html">Skincare Routine</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <header class="position-relative py-5 text-center text-white" style="min-height: 320px;">
+        <img src="../asset/image/contactusbanner.webp" 
+             class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" 
+             style="object-position: center;"
+             alt="Contact Skin Bestie Background">
+        
+        <!-- Dark Overlay -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.4);"></div>
+        
+        <!-- Banner Content -->
+        <div class="container h-100 d-flex flex-column justify-content-center align-items-center position-relative z-1 py-4">
+            <span class="badge rounded-pill bg-white text-dark text-uppercase px-3 py-2 mb-3 extra-small" style="letter-spacing: 1.5px;">
+                Get In Touch
+            </span>
+            <h1 class="display-4 fw-bold mb-2 text-white" style="font-family: 'Georgia', serif;">We'd Love to Hear From You</h1>
+            <p class="lead opacity-90 mb-0 fs-6" style="max-width: 550px;">
+                Have a question about your skincare routine or feedback? Drop us a message below!
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Section: Form + Side Image -->
+    <main class="container my-5 flex-grow-1">
+        <div class="row g-4 align-items-stretch">
+            
+            <!-- Left Side: Image Card -->
+            <div class="col-lg-5">
+                <div class="h-100 position-relative rounded shadow-sm overflow-hidden min-vh-40" style="min-height: 380px;">
+                    <img src="../asset/image/thank.jpg" 
+                         class="w-100 h-100 position-absolute top-0 start-0 object-fit-cover" 
+                         alt="Skincare Support">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25"></div>
+                    <div class="position-absolute bottom-0 start-0 p-4 text-white z-1">
+                        <h3 class="fw-bold mb-1" style="font-family: 'Georgia', serif;">Skin Bestie Support</h3>
+                        <p class="small opacity-90 mb-0">Our team is here to help guide your skin health journey.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Contact Form -->
+            <div class="col-lg-7">
+                <div class="bg-white p-4 p-md-5 rounded shadow-sm h-100 d-flex flex-column justify-content-center">
+                    
+                    <!-- Dynamic Success/Error Alert -->
+                    <div id="alert-container"></div>
+
+                    <form id="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-bold">Full Name</label>
+                            <input type="text" name="user_name" class="form-control" id="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Email Address</label>
+                            <input type="email" name="user_email" class="form-control" id="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-bold">Message</label>
+                            <textarea name="message" class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn btn-dark w-100 py-2 fw-semibold">
+                            Send Message
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-sage py-5 mt-auto" style="background-color: #4a6255; color: #e2e8f0;">
+        <div class="container">
+            <div class="row gy-3">
+                <div class="col-md-3">
+                    <h5 class="fw-bold text-white mb-1">Skin Bestie</h5>
+                    <p class="small mb-0 text-light opacity-75">Lucky Vicky get pretty by knowing your skin</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold text-white">Explore</h6>
+                    <ul class="list-unstyled small mb-0">
+                        <li><a href="../index.html" class="text-light text-decoration-none opacity-75">Home</a></li>
+                        <li><a href="skin-types.html" class="text-light text-decoration-none opacity-75">Skin Type</a></li>
+                        <li><a href="ingredients.html" class="text-light text-decoration-none opacity-75">Ingredients</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold text-white">Learn</h6>
+                    <ul class="list-unstyled small mb-0">
+                        <li><a href="about.html" class="text-light text-decoration-none opacity-75">About</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none opacity-75">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold text-white">Contact</h6>
+                    <p class="small mb-0 opacity-75"><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></p>
+                    <p class="small mb-0 opacity-75"><a href="#" class="text-light text-decoration-none">Privacy Policy</a></p>
+                </div>
+            </div>
+            <hr class="border-secondary my-3 opacity-25">
+            <p class="text-center small mb-0 opacity-75">&copy; 2026 Skin Bestie. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../asset/js/main.js"></script>
+
+    <!-- Form Handling Script -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const alertContainer = document.getElementById('alert-container');
+
+            // Button loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span>Sending...';
+
+            // Send form via EmailJS
+            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your real IDs from EmailJS
+            emailjs.sendForm('service_9www5ga', 'template_ubwzirf', this)
+                .then(function() {
+                    alertContainer.innerHTML = `
+                        <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+                            <strong>Message Sent!</strong> Thank you for reaching out. We will respond shortly.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    `;
+                    document.getElementById('contact-form').reset();
+                }, function(error) {
+                    alertContainer.innerHTML = `
+                        <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
+                            <strong>Sending Failed!</strong> Please try again later or contact us directly.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    `;
+                    console.error('EmailJS Error:', error);
+                })
+                .finally(function() {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Send Message';
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+:root {
+    --primary-sage: #4a6255;
+    --primary-sage-dark: #374a40;
+    --bg-cream: #f8f6f0;
+    --card-cream: #f1ede4;
+    --text-dark: #2c3531;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.navbar-sage {
+    background-color: var(--primary-sage) !important;
+}
+
+.card-custom {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.card-cream {
+    background-color: var(--card-cream);
+    border: none;
+    border-radius: 16px;
+}
+
+.bg-sage {
+    background-color: var(--primary-sage) !important;
+    color: #ffffff;
+}
+
+footer.footer-sage {
+    background-color: var(--primary-sage);
+    color: #e2e8f0;
+}
+
+footer.footer-sage a {
+    color: #e2e8f0;
+    text-decoration: none;
+}
+
+footer.footer-sage a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}

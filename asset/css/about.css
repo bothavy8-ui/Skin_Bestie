@@ -1,0 +1,17 @@
+section {
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+}
+
+h2 {
+    color: #4a5568;
+    margin-bottom: 0.75rem;
+}
+
+p {
+    line-height: 1.7;
+}

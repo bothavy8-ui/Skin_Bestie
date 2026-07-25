@@ -1,0 +1,19 @@
+.card {
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: #8fa391 !important;
+}
+
+.card-title {
+    color: #333333;
+}
+
+.btn-outline-dark {
+    border-radius: 20px;
+    padding: 0.375rem 1.25rem;
+}

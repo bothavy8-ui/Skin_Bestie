@@ -1,0 +1,15 @@
+.bg-white {
+    border-radius: 12px;
+}
+
+.border-bottom {
+    border-bottom-color: #e2e8f0 !important;
+}
+
+h3 {
+    letter-spacing: 0.5px;
+}
+
+main .col-md-6 article {
+    border-left: 4px solid #8fa391;
+}
