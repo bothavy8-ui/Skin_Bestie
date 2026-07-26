@@ -26,7 +26,15 @@ main .col-md-6 article {
     object-fit: cover;
     object-position: center;
 }
+.routine-step-card {
+    background-color: #f8f5f0;
+    border: 1px solid #d8cfc3;
+    border-radius: 16px;
+}
 
+.routine-step-card:hover {
+    background-color: #f1ebe2;
+}
 @media (min-width: 992px) {
     .routine-img-wrapper {
         height: 100%;
